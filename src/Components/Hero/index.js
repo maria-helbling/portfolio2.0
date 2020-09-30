@@ -19,7 +19,7 @@ export default function Hero() {
 
     return (
         <>
-        <Grid container height="50%" justify="center">
+        <Grid container height="50vh" justify="center">
             <Grid item xs={6}>
                 <p>Business Strategy and Operations</p>
             </Grid>
