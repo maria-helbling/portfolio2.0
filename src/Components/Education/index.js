@@ -6,16 +6,20 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import ImageIcon from '@material-ui/icons/Image';
-import WorkIcon from '@material-ui/icons/Work';
-import BeachAccessIcon from '@material-ui/icons/BeachAccess';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import SchoolIcon from '@material-ui/icons/School';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
-      maxWidth: 360,
-      backgroundColor: theme.palette.background.paper,
+      height:'100vh',
+      backgroundColor: theme.palette.neutral.main,
+      paddingTop:theme.spacing(3),
+      textAlign: 'center'
     },
+    content:{
+        width: '90vw'
+    }
   }));
 
 export default function Education() {
@@ -26,7 +30,7 @@ export default function Education() {
       <ListItem>
         <ListItemAvatar>
           <Avatar>
-            <ImageIcon />
+            <SchoolIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="University of Cambridge" secondary="BA Economics" />
@@ -34,7 +38,7 @@ export default function Education() {
       <ListItem>
         <ListItemAvatar>
           <Avatar>
-            <WorkIcon />
+            <SchoolIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="University of Amsterdam" secondary="MSc Economics" />
@@ -42,7 +46,7 @@ export default function Education() {
       <ListItem>
         <ListItemAvatar>
           <Avatar>
-            <BeachAccessIcon />
+            <VerifiedUserIcon/>
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="University of Washington" secondary="Certification: Full Stack Web Development" />
@@ -50,7 +54,7 @@ export default function Education() {
       <ListItem>
         <ListItemAvatar>
           <Avatar>
-            <BeachAccessIcon />
+            <VerifiedUserIcon/>
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="Project Management Institute" secondary="Certified Associate of Project Management" />

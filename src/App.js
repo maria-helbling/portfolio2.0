@@ -11,7 +11,40 @@ import Skills from './Components/Skills'
 import Fab from '@material-ui/core/Fab'
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined'
 import Tooltip from '@material-ui/core/Tooltip';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette:{
+    primary: {
+      main:'#0060aa'
+    },
+    secondary:{
+      main:'#fa4637',
+      contrastText:'#29353d'
+    },
+    neutral:{
+      main:'#e1e9ec',
+      contrastText:'#29353d'
+    }
+  },
+  typography: {
+    fontFamily: [
+      'Work Sans',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
+})
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -24,10 +57,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 function App() {
   const classes = useStyles();
   return (
     <div>
+      <ThemeProvider theme={theme}>
       <Hero />
       <Nav/>
       <Intro/>
@@ -41,6 +77,7 @@ function App() {
         <DescriptionOutlinedIcon />
       </Fab>
       </Tooltip>
+      </ThemeProvider>
     </div>
   );
 }

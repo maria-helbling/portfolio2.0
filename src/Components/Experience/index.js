@@ -6,10 +6,14 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Box from '@material-ui/core/Box'
 
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
+      height:'100vh',
+      paddingTop:theme.spacing(3),
+      alignItems: 'flex-center'
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
@@ -32,6 +36,7 @@ export default function Experience() {
 
     return(
         <>
+        <Box className={classes.root}>
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -95,6 +100,7 @@ export default function Experience() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </Box>
         </>
     )
 }
